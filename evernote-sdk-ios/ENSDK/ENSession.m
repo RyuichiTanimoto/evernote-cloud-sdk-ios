@@ -1930,6 +1930,21 @@ static BOOL disableRefreshingNotebooksCacheOnLaunch;
     return bundleSeedID;
 }
 
+- (NSString *)getUserID
+{
+    return [NSString stringWithFormat:@"%d", [self userID]];
+}
+
+- (NSString *)getUserName
+{
+    return [[self user] username];
+}
+
+- (NSString *)getPrimaryAuthenticationToken
+{
+    return [self primaryAuthenticationToken];
+}
+
 @end
 
 #pragma mark - Default logger
